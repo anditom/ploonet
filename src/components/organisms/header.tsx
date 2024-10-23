@@ -46,10 +46,9 @@ const Header: React.FC = () => {
         </button>
 
         <div
-          className={
-            "md:flex flex-grow items-center justify-between" +
-            (navbarOpen ? " flex" : " hidden")
-          }
+          className={`${
+            navbarOpen ? "flex" : "hidden"
+          } md:flex flex-grow items-center justify-between`}
           id="navbar"
         >
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center font-semibold">
@@ -76,19 +75,16 @@ const Header: React.FC = () => {
             </Link>
           </nav>
 
-          <div
-            className="flex items-center space-x-4"
-            style={{ paddingLeft: "200px" }}
-          >
+          <div className="flex items-center space-x-4 pl-0 md:pl-5">
             <Link href="/login" className="hover:text-gray-400">
               로그인
             </Link>
 
-            <div className="relative" style={{ paddingTop: "6px" }}>
+            <div className="relative pt-1">
               <button className="text-white hover:text-gray-400">
                 <Image
                   src="/LanguageSelector.svg"
-                  alt="PlooNet Logo"
+                  alt="Language Selector"
                   width={34}
                   height={20}
                 />

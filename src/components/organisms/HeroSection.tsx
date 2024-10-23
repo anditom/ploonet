@@ -13,13 +13,15 @@ const HeroSection: React.FC = () => {
         priority
       />
 
-      <div className="absolute right-8 bottom-8 md:top-56 md:right-16 z-10">
+      <div className="absolute right-8 bottom-8 top-12 md:right-16 z-10">
+        {" "}
+        {/* Updated to support both views */}
         <a
           href="#"
-          className="flex flex-col items-center justify-center w-20 h-20 bg-gradient-to-r from-red-400 to-pink-500 text-white rounded-full shadow-lg"
+          className="flex flex-col items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-red-400 to-pink-500 text-white rounded-full shadow-lg transition-transform transform hover:scale-105"
         >
-          <span className="text-sm md:text-base">제작</span>
-          <span className="text-sm md:text-base">문의하기</span>
+          <span className="text-xs md:text-sm">제작</span>
+          <span className="text-xs md:text-sm">문의하기</span>
           <span className="mt-1">
             <svg
               width="15"

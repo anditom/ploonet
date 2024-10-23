@@ -21,15 +21,18 @@ const PreviousWorks: React.FC = () => {
     <section className="bg-black text-white py-16 text-center">
       <h2 className="text-4xl font-bold mb-10">PREVIOUS WORKS</h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {images.map((src, index) => (
-          <div key={index} className="relative w-full h-64">
+          <div
+            key={index}
+            className="relative w-full h-64 rounded-lg overflow-hidden group"
+          >
             <Image
               src={src}
               alt={`Previous work ${index + 1}`}
               layout="fill"
               objectFit="cover"
-              className="rounded-lg"
+              className="transition-transform duration-300 ease-in-out transform group-hover:scale-105"
               priority={index < 4}
             />
           </div>

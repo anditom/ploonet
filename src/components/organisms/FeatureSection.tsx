@@ -1,5 +1,12 @@
 import React from "react";
 
+const features = [
+  { title: "FAST", value: "x2" },
+  { title: "QUALITY", value: "A++" },
+  { title: "LOW PRICE", value: "1/2" },
+  { title: "HIGH TECH", value: "Gen AI" },
+];
+
 const FeatureSection: React.FC = () => {
   return (
     <section className="bg-black text-white py-16 px-8 text-center">
@@ -12,26 +19,19 @@ const FeatureSection: React.FC = () => {
         을 받아보세요.
       </h3>
 
-      <div className="flex justify-center gap-8 mb-12">
-        <div className="flex flex-col items-center border-2 border-red-400 rounded-full w-36 h-36 justify-center">
-          <h4 className="text-red-400 text-xl font-semibold">FAST</h4>
-          <p className="text-white">x2</p>
-        </div>
-
-        <div className="flex flex-col items-center border-2 border-red-400 rounded-full w-36 h-36 justify-center">
-          <h4 className="text-red-400 text-xl font-semibold">QUALITY</h4>
-          <p className="text-white">A++</p>
-        </div>
-
-        <div className="flex flex-col items-center border-2 border-red-400 rounded-full w-36 h-36 justify-center">
-          <h4 className="text-red-400 text-xl font-semibold">LOW PRICE</h4>
-          <p className="text-white">1/2</p>
-        </div>
-
-        <div className="flex flex-col items-center border-2 border-red-400 rounded-full w-36 h-36 justify-center">
-          <h4 className="text-red-400 text-xl font-semibold">HIGH TECH</h4>
-          <p className="text-white">Gen AI</p>
-        </div>
+      <div className="flex flex-wrap justify-center gap-8 mb-12">
+        {features.map((feature) => (
+          <div
+            key={feature.title}
+            className="flex flex-col items-center border-2 border-red-400 rounded-full w-36 h-36 justify-center transition-transform duration-300 hover:scale-105"
+            aria-label={`${feature.title}: ${feature.value}`}
+          >
+            <h4 className="text-red-400 text-xl font-semibold">
+              {feature.title}
+            </h4>
+            <p className="text-white">{feature.value}</p>
+          </div>
+        ))}
       </div>
 
       <h3 className="text-2xl font-semibold mb-4">AI VIDEO ON YOUR DEMAND</h3>
