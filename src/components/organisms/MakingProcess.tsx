@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const stepsGeneral = [
   {
@@ -29,6 +30,7 @@ const stepsGeneral = [
     p2: "* 영상 수정 무료 1회 제공",
   },
 ];
+
 const stepsQuickserve = [
   {
     title: "안내",
@@ -66,7 +68,7 @@ const MakingProcess: React.FC = () => {
     <section className="text-white py-16 text-center">
       <h2 className="text-4xl font-bold mb-10">MAKING PROCESS</h2>
       <div className="flex justify-center space-x-30 w-300">
-        {/* Crad 1 */}
+        {/* Card 1 */}
         <div
           className={`text-left p-4 rounded-lg cursor-pointer ${
             activeCard === "general" ? "border border-pink-400" : ""
@@ -120,7 +122,7 @@ const MakingProcess: React.FC = () => {
           </div>
         </div>
 
-        {/* Crad 2 */}
+        {/* Card 2 */}
         <div
           className={`text-left p-4 bg-gray-900 rounded-lg cursor-pointer ${
             activeCard === "quickserve" ? "border border-orange-400" : ""
@@ -136,19 +138,20 @@ const MakingProcess: React.FC = () => {
                 <li key={index} className="flex items-center space-x-4 p-4">
                   <div className="relative w-24 h-24">
                     <div
-                      className="absolute inset-0 bg-cover bg-center "
+                      className="absolute inset-0 bg-cover bg-center"
                       style={{ backgroundImage: `url(${step.svg})` }}
                     />
-
                     <span className="absolute top-3 left-5 text-white font-bold text-sm">
                       {`STEP ${index + 1}`}
-                      <img
-                        src={`${step.iconsvg}`}
-                        alt={`Step ${index + 1}`}
-                        className="w-10 h-10"
-                        style={{ padding: 4 }}
-                      />
                     </span>
+                    <Image
+                      src={`${step.iconsvg}`}
+                      alt={`Step ${index + 1}`}
+                      width={40}
+                      height={40}
+                      className="w-10 h-10"
+                      style={{ padding: 4 }}
+                    />
                   </div>
                   <div>
                     <p>{step.title}</p>
@@ -171,10 +174,10 @@ const MakingProcess: React.FC = () => {
       </div>
 
       <p className="text-gray-400 max-w-3xl mx-auto mb-8">
-          * 2~3분, 표준 견적에 따르는 일반 영상편집에 한정되며,  모션그래픽 등
-        전문 작업이 필요할 경우 작업 기간은 조정될 수 있습니다. ** 영상의 길이,
-        영상 제작에 필요한 수준에 따라 빠른 작업이 불가할 수 있으며,
-        클라이언트와의 협의를 통해 작업 기간을 조정할 수 있습니다.
+        * 2~3분, 표준 견적에 따르는 일반 영상편집에 한정되며, 모션그래픽 등 전문
+        작업이 필요할 경우 작업 기간은 조정될 수 있습니다. ** 영상의 길이, 영상
+        제작에 필요한 수준에 따라 빠른 작업이 불가할 수 있으며, 클라이언트와의
+        협의를 통해 작업 기간을 조정할 수 있습니다.
       </p>
     </section>
   );

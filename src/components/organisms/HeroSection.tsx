@@ -3,15 +3,17 @@ import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (
-    <section
-      className="relative w-full h-screen flex items-center justify-center text-center"
-      style={{
-        backgroundImage: `url('../assets/heroBackground.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="absolute right-8 bottom-8 md:top-56 md:right-16">
+    <section className="relative w-full h-screen flex items-center justify-center text-center">
+      <Image
+        src="/assets/heroBackground.png"
+        alt="Hero Background"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+        priority
+      />
+
+      <div className="absolute right-8 bottom-8 md:top-56 md:right-16 z-10">
         <a
           href="#"
           className="flex flex-col items-center justify-center w-20 h-20 bg-gradient-to-r from-red-400 to-pink-500 text-white rounded-full shadow-lg"

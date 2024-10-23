@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
@@ -9,9 +10,9 @@ const Header: React.FC = () => {
   return (
     <header className="text-white body-font bg-black">
       <div className="container mx-auto flex flex-wrap p-5 items-center justify-between">
-        <a
-          className="flex title-font font-medium text-white mb-4 md:mb-0"
+        <Link
           href="/"
+          className="flex title-font font-medium text-white mb-4 md:mb-0"
         >
           <Image
             src="/PlooNetLogo.svg"
@@ -19,7 +20,7 @@ const Header: React.FC = () => {
             width={124}
             height={20}
           />
-        </a>
+        </Link>
 
         <button
           className="text-white cursor-pointer text-xl leading-none py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none ml-auto"
@@ -52,36 +53,36 @@ const Header: React.FC = () => {
           id="navbar"
         >
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center font-semibold">
-            <a className="mr-6 hover:text-gray-400" href="/">
+            <Link href="/" className="mr-6 hover:text-gray-400">
               스튜디오
-            </a>
-            <a className="mr-6 hover:text-gray-400" href="/contact">
+            </Link>
+            <Link href="/contact" className="mr-6 hover:text-gray-400">
               워크센터
-            </a>
-            <a className="mr-6 hover:text-gray-400" href="/404">
+            </Link>
+            <Link href="/404" className="mr-6 hover:text-gray-400">
               손비서
-            </a>
-            <a className="mr-6 hover:text-gray-400" href="/404">
+            </Link>
+            <Link href="/404" className="mr-6 hover:text-gray-400">
               메타휴먼
-            </a>
-            <a className="mr-6 hover:text-gray-400" href="/404">
+            </Link>
+            <Link href="/404" className="mr-6 hover:text-gray-400">
               영상제작소
-            </a>
-            <a className="mr-6 hover:text-gray-400" href="/404">
+            </Link>
+            <Link href="/404" className="mr-6 hover:text-gray-400">
               공지사항
-            </a>
-            <a className="mr-6 hover:text-gray-400" href="/404">
+            </Link>
+            <Link href="/404" className="mr-6 hover:text-gray-400">
               제휴문의
-            </a>
+            </Link>
           </nav>
 
           <div
             className="flex items-center space-x-4"
             style={{ paddingLeft: "200px" }}
           >
-            <a className="hover:text-gray-400" href="/login">
+            <Link href="/login" className="hover:text-gray-400">
               로그인
-            </a>
+            </Link>
 
             <div className="relative" style={{ paddingTop: "6px" }}>
               <button className="text-white hover:text-gray-400">

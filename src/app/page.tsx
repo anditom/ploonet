@@ -1,4 +1,3 @@
-import HomePage from "@/components/pages/HomePage";
 import Header from "@/components/organisms/header";
 import HeroSection from "@/components/organisms/HeroSection";
 import FeatureSection from "@/components/organisms/FeatureSection";

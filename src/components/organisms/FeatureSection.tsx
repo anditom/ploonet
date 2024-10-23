@@ -6,8 +6,10 @@ const FeatureSection: React.FC = () => {
       <h2 className="text-lg text-red-400 font-bold mb-4">영상 제작소</h2>
       <h3 className="text-3xl font-semibold mb-8">
         당장 내일
-        <span className="text-white font-bold">'고품질 맞춤 영상'</span>을
-        받아보세요.
+        <span className="text-white font-bold">
+          &apos;고품질 맞춤 영상&apos;
+        </span>
+        을 받아보세요.
       </h3>
 
       <div className="flex justify-center gap-8 mb-12">
@@ -41,8 +43,8 @@ const FeatureSection: React.FC = () => {
 
       <p className="text-gray-400 max-w-3xl mx-auto">
         가격은 절반으로, 속도는 두배로, 품질은 A++! 기업 홍보, 제품 소개, 교육
-        및 행사, 정보 및 안내 영상 등 당신이 필요한 "그 영상"을 플루투스
-        영상제작소에 맡겨주세요.
+        및 행사, 정보 및 안내 영상 등 당신이 필요한 &quot;그 영상&quot;을
+        플루투스 영상제작소에 맡겨주세요.
       </p>
     </section>
   );
